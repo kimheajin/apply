@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 회원 관련 -->
+<mapper namespace="main">
+	
+	<insert id="setMemberData" parameterType="kr.co.mindall.apply.Dao.Member">
+		INSERT INTO member VALUES(#{name}, SYSDATE)
+	</insert>
+</mapper>
