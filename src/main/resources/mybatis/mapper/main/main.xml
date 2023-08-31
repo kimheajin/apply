@@ -4,12 +4,4 @@
 <!-- 회원 관련 -->
 <mapper namespace="main">
 	
-	<insert id="setMemberData" parameterType="kr.co.mindall.apply.Dao.Member">
-		INSERT INTO member VALUES(#{name}, SYSDATE)
-	</insert>
-	
-	<select id="getMember" resultType="HashMap">
-		SELECT ROWNUM, * FROM member
-		WHERE ROWNUM <![CDATA[ <= ]]> 10
-	</select>
 </mapper>

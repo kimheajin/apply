@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 회원 관련 -->
+<!-- <mapper namespace="kr.co.mindall.apply.mapper.LoginMapper"> -->
+<mapper namespace="commonDao">
+	
+	<insert id="setUser" parameterType="kr.co.mindall.apply.dto.MngAccount">
+		INSERT INTO MAT_MANAGER(MNG_SN, MNG_ID, PRNT_MNG_SN, MNG_NM, MNG_PW
+								, USE_YN, REG_USER, REG_DT)
+						 VALUES(#{mngSn}, #{mngId}, #{prntMngSn}, #{mngNm}, #{mngPw}, #{useYn}, 
+						 		, #{regUser}, SYSDATE)
+	</insert>
+	
+	<select id="getUser" resultType="kr.co.mindall.apply.dto.MngAccount" parameterType="java.lang.String">
+		SELECT
+			 * 
+		FROM 
+			MAT_MANAGER
+		WHERE
+			MNG_ID = #{mngId}
+	</select>
+</mapper>

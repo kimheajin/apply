@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+  <head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.css}" />
+    <link rel="stylesheet" type="text/css" th:href="@{/css/login/login.css}" />
+  </head>
+  <body>
+ <div layout:fragment="content">
+  <div id="wrap" class="back04">
+   <div class="login_box">
+	<div class="login_group">
+	 <form method="post" action="/joinProcess">
+	  <ul class="login_form">
+	   <li class="form_box">
+		<h2 class="id">아이디</h2>
+		<input type="text" name="mngId" placeholder="ID를 입력하세요." />
+	   </li>
+	   <li class="form_box">
+		<h2 class="pw">패스워드</h2>
+		<input type="text" name="mngPw" placeholder="비밀번호를 입력하세요."/>
+	   </li>
+	   <li class="form_box">
+	   	<input type="text" name="mngNm" placeholder="이름을 입력하세요."/>
+	   </li>
+	   <li>
+		<button type="submit" class="btn_login">회원가입</button>
+	   </li>
+	  </ul>
+	 </form>
+    </div>
+   </div>
+  </div>
+ </div>
+<script>
+	/* loginProcess = function() {
+		var popSeqArray = new Array();
+		
+		common.runAjax({
+			url: "../mng/login",
+			type : "POST" , 
+			data: JSON.stringify({
+				"popSeqArray" : popSeqArray
+			}),			
+			cbkFunc : function(data) {
+				if(data.status == "success"){
+					alert("성공.");
+				}
+			}
+		});
+	}  */
+</script>
+</body>
+</html>

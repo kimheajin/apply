@@ -1,13 +1,14 @@
 package kr.co.mindall.apply.service;
 
-import java.util.HashMap;
-import java.util.List;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
-import kr.co.mindall.apply.Dao.MngAccount;
+import kr.co.mindall.apply.security.dto.MngAccount;
 
 public interface MngService {
 
-	public int createUser(MngAccount member);
+	public void createUser(MngAccount mngAccount);
 	
-	public List<HashMap<String, Object>> getUser();
+	public PasswordEncoder passwordEncoder();
+	
+	public MngAccount getUser(MngAccount mngAccount);
 }
